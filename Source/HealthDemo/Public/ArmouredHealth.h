@@ -22,11 +22,11 @@ private:
 	UPROPERTY(EditAnywhere, Category = "ArmouredHealth|MaxArmouredHealth")
 	int MaxArmouredHealth = 100;
 	UPROPERTY(VisibleAnywhere, Category = "ArmouredHealth|AHP")
-	int AHP = 0;
+	int AHP = MaxArmouredHealth;
 
 public:
 	// Sets default values for this component's properties
-	UArmouredHealth();
+	//UArmouredHealth();
 
 	public:
 		// notice i have to say this is an override

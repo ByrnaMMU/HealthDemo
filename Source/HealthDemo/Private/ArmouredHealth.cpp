@@ -10,13 +10,13 @@
 * 
 */
 
-UArmouredHealth::UArmouredHealth()
+/*UArmouredHealth::UArmouredHealth()
 {
 	//Disable the update as we dont need it
 	//PrimaryComponentTick.bCanEverTick = true;
 	AHP = MaxArmouredHealth;
 	// ...
-}
+}*/
 
 void UArmouredHealth::TakeDamage(int Damage)
 {
