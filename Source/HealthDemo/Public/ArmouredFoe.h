@@ -17,9 +17,15 @@ class HEALTHDEMO_API AArmouredFoe : public ABasicFoe
 
 public:
 	// Sets default values for this pawn's properties
-	AArmouredFoe();
-
+	//AArmouredFoe();
+	//UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Components|ArmouredHealth")
+	//UHealth* ArmouredHealth;
 	// for this task look at how we called the died and see if you can recreate it, to change the material
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Material", meta = (AllowPrivateAccess = "true"))
 	UMaterial* UnArmouredMaterial;
+
+
+protected:
+	// Called when the game starts or when spawned
+	virtual void BeginPlay() override;
 };

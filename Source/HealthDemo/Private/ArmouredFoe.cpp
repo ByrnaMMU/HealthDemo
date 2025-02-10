@@ -4,7 +4,16 @@
 #include "ArmouredFoe.h"
 #include "ArmouredHealth.h"
 
-AArmouredFoe::AArmouredFoe()
+//AArmouredFoe::AArmouredFoe()
+//{
+	// attach the health
+	//ArmouredHealth = CreateDefaultSubobject<UArmouredHealth>(TEXT("ArmouredHealth"));
+	//Super::ABasicFoe();
+//}
+
+void AArmouredFoe::BeginPlay()
 {
 	Super::BeginPlay();
+	//Health->Died.AddDynamic(this, &ABasicFoe::Died);
 }
+

@@ -9,8 +9,30 @@
 * UHealth::Damage will call the base class (UHealths) damage funtion not the Armoured Health Damage
 * 
 */
+
+UArmouredHealth::UArmouredHealth()
+{
+	//Disable the update as we dont need it
+	//PrimaryComponentTick.bCanEverTick = true;
+	AHP = MaxArmouredHealth;
+	// ...
+}
+
 void UArmouredHealth::TakeDamage(int Damage)
 {
-	UE_LOG(LogTemp, Warning, TEXT("Armoured Health took no damage! you might want to change that"));
-	Super::TakeDamage(Damage);
+	AHP -= Damage;
+	UE_LOG(LogTemp, Warning, TEXT("armour h %d"), AHP);
+	if (AHP <= 0)
+	{
+		Super::TakeDamage(Damage);
+	}
+}
+
+void UArmouredHealth::Repair(int Repair)
+{
+	AHP += Repair;
+	if (AHP > MaxArmouredHealth)
+	{
+		AHP = MaxArmouredHealth;
+	}
 }
